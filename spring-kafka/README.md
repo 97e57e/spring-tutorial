@@ -2,9 +2,10 @@
 
 ## Mac OS 기준의 카프카 설정
 
-### Kafka 설치
+### Kafka & zookeeper 설치
 ```
 brew install kafka
+brew install zookeeper
 ```
 
 ### 세팅 설정
@@ -21,6 +22,7 @@ kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partit
 ```
 ### kafka 실행
 ```
+brew services start zookeeper // 주키퍼 먼저 실행
 brew services start kafka
 ```
 
