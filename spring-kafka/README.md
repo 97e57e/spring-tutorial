@@ -18,7 +18,7 @@ brew install zookeeper
 ### 새로운 topic 생성
 ```
 // test 라는 이름의 토픽 생성
-kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic mytopic
+kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
 ```
 ### kafka 실행
 ```
