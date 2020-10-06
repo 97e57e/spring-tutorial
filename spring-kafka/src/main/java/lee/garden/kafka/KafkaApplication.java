@@ -13,14 +13,11 @@ import org.springframework.kafka.core.KafkaTemplate;
 @SpringBootApplication
 public class KafkaApplication {
 
-	@Autowired
-	private KafkaTemplate<String, String> kafkaTemplate;
-
 	public static void main(String[] args) {
 		SpringApplication.run(KafkaApplication.class, args);
 	}
 
-	// 카프카 listen
+	// 카프카 message 를 consume 하는 부분
 	@KafkaListener(topics = "test", groupId = "my-group")
 	public void listen(String message) {
 		log.info("[RECEIVED] : " + message);
